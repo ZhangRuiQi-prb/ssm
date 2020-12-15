@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="#" type="image/png">
+
+<title>Company Details</title>
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-responsive.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-confirm.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-fileupload.min.css" />
+<style type="text/css">
+.swiper-container {
+	width: 100%;
+	height: 350px;
+}
+
+video {
+	object-fit: fill;
+	width: 100%;
+	height: 350px;
+}
+</style>
+
+
+</head>
+
+<body class="sticky-header">
+
+	<section>
+		<!-- left side start-->
+		<div class="left-side sticky-left-side">
+
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+
+			<div class="logo-icon text-center">
+				<a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+			</div>
+			<!--logo and iconic logo end-->
+
+
+			<div class="left-side-inner">
+
+				<!-- visible to small devices only -->
+				<div class="visible-xs hidden-sm hidden-md hidden-lg">
+					<div class="media logged-user">
+						<img alt="" src="images/photos/user-avatar.png"
+							class="media-object">
+						<div class="media-body">
+							<h4>
+								<a href="#">John Doe</a>
+							</h4>
+							<span>"Hello There..."</span>
+						</div>
+					</div>
+
+					<h5 class="left-nav-title">Account Information</h5>
+					<ul class="nav nav-pills nav-stacked custom-nav">
+						<li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+						<li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+						<li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign
+									Out</span></a></li>
+					</ul>
+				</div>
+
+				<!--sidebar nav start-->
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					<li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+					<li class="menu-list"><a href=""><i class="fa fa-laptop"></i>
+							<span>Layouts</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="blank_page.html"> Blank Page</a></li>
+							<li><a href="boxed_view.html"> Boxed Page</a></li>
+							<li><a href="leftmenu_collapsed_view.html"> Sidebar
+									Collapsed</a></li>
+							<li><a href="horizontal_menu.html"> Horizontal Menu</a></li>
+						</ul></li>
+					<li class="menu-list"><a href=""><i class="fa fa-book"></i>
+							<span>UI Elements</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="general.html"> General</a></li>
+							<li><a href="buttons.html"> Buttons</a></li>
+							<li><a href="tabs-accordions.html"> Tabs & Accordions</a></li>
+							<li><a href="typography.html"> Typography</a></li>
+							<li><a href="slider.html"> Slider</a></li>
+							<li><a href="panels.html"> Panels</a></li>
+
+						</ul></li>
+					<li class="menu-list"><a href=""><i class="fa fa-cogs"></i>
+							<span>Components</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="grids.html"> Grids</a></li>
+							<li><a href="gallery.html"> Media Gallery</a></li>
+							<li><a href="calendar.html"> Calendar</a></li>
+							<li><a href="tree_view.html"> Tree View</a></li>
+							<li><a href="nestable.html"> Nestable</a></li>
+
+						</ul></li>
+
+					<li><a href="fontawesome.html"><i class="fa fa-bullhorn"></i>
+							<span>Fontawesome</span></a></li>
+
+					<li class="menu-list"><a href=""><i class="fa fa-envelope"></i>
+							<span>Mail</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="mail.html"> Inbox</a></li>
+							<li><a href="mail_compose.html"> Compose Mail</a></li>
+							<li><a href="mail_view.html"> View Mail</a></li>
+						</ul></li>
+
+					<li class="menu-list"><a href=""><i class="fa fa-tasks"></i>
+							<span>Forms</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="form_layouts.html"> Form Layouts</a></li>
+							<li><a href="form_advanced_components.html"> Advanced
+									Components</a></li>
+							<li><a href="form_wizard.html"> Form Wizards</a></li>
+							<li><a href="form_validation.html"> Form Validation</a></li>
+							<li><a href="editors.html"> Editors</a></li>
+							<li><a href="inline_editors.html"> Inline Editors</a></li>
+							<li><a href="pickers.html"> Pickers</a></li>
+							<li><a href="dropzone.html"> Dropzone</a></li>
+						</ul></li>
+					<li class="menu-list"><a href=""><i
+							class="fa fa-bar-chart-o"></i> <span>Charts</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="flot_chart.html"> Flot Charts</a></li>
+							<li><a href="morris.html"> Morris Charts</a></li>
+							<li><a href="chartjs.html"> Chartjs</a></li>
+							<li><a href="c3chart.html"> C3 Charts</a></li>
+						</ul></li>
+					<li class="menu-list"><a href="#"><i class="fa fa-th-list"></i>
+							<span>Data Tables</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="basic_table.html"> Basic Table</a></li>
+							<li><a href="dynamic_table.html"> Advanced Table</a></li>
+							<li><a href="responsive_table.html"> Responsive Table</a></li>
+							<li><a href="editable_table.html"> Edit Table</a></li>
+						</ul></li>
+
+					<li class="menu-list"><a href="#"><i
+							class="fa fa-map-marker"></i> <span>Maps</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="google_map.html"> Google Map</a></li>
+							<li><a href="vector_map.html"> Vector Map</a></li>
+						</ul></li>
+					<li class="menu-list nav-active"><a href=""><i
+							class="fa fa-file-text"></i> <span>Extra Pages</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="profile.html"> Profile</a></li>
+							<li><a href="invoice.html"> Invoice</a></li>
+							<li><a href="pricing_table.html"> Pricing Table</a></li>
+							<li><a href="timeline.html"> Timeline</a></li>
+							<li><a href="blog_list.html"> Blog List</a></li>
+							<li class="active"><a href="blog_details.html"> Blog
+									Details</a></li>
+							<li><a href="directory.html"> Directory </a></li>
+							<li><a href="chat.html"> Chat </a></li>
+							<li><a href="404.html"> 404 Error</a></li>
+							<li><a href="500.html"> 500 Error</a></li>
+							<li><a href="registration.html"> Registration Page</a></li>
+							<li><a href="lock_screen.html"> Lockscreen </a></li>
+						</ul></li>
+					<li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Login
+								Page</span></a></li>
+
+				</ul>
+				<!--sidebar nav end-->
+
+			</div>
+		</div>
+		<!-- left side end-->
+
+		<!-- main content start-->
+		<div class="main-content" id="app1">
+
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+
+
+				<!--notification menu start -->
+				<div class="menu-right">
+					<ul class="notification-menu">
+						
+						<li><a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+							<img :src="'images/photos/'+logsimg" id="ssimg" alt="" />
+	                        <span id="spanusn">{{logmname}}:{{logsname}}</span>
+							<input type="hidden" id="ssid" :value="logsid" />
+                        	<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+								<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+								<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+								<li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+							</ul></li>
+
+					</ul>
+				</div>
+				<!--notification menu end -->
+
+			</div>
+			<!-- header section end-->
+
+			<!-- page heading start
+        <div  class="page-heading" style="height: 60px;">
+       <h3>
+                 <img id="imgCom" width='55' height='45' :src="imgcom" />
+                 <h5>{{msg}}</h5>
+            </h3>
+       
+            
+					
+        </div>-->
+			<!-- page heading end
+        模态框-->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+							<h4 class="modal-title" id="exampleModalLabel"></h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div>
+
+									<h3 class="color-terques" id="recipient-name"></h3>
+								</div>
+								<div class="form-group">
+									<label style="font-size:45px" for="message-text" class="control-label">
+      					            <img  width='55' height='52' id="message-img" src=""></label>  
+      					            <span  id="message-text"></span> 
+      					            <input id="message-pid" type="hidden"  /> 
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<!--  -->
+							<button type="button" style="width: 200px;" id="sendModel"
+								class="btn btn-primary"  @click="SendPos">Send message</button>
+							<button type="button" style="width: 100px;"
+								class="btn btn-default" data-dismiss="modal">Close</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--body wrapper start-->
+			<div class="wrapper">
+				<div class="row blog">
+					<div class="col-md-4">
+
+						<div class="panel">
+							<div class="panel-body">
+								<div class="blog-post">
+									<h3>专业详情:</h3>
+									<div class="media" v-for="item in lists">
+										<a href="javascript:;" class="pull-left"> 
+										<img style="background-color: #39B3D7;" width="92" height="75"
+											:src="'images/projects/'+item.pimg">
+										</a>
+										<div class="media-body">
+											<h5 class="media-heading">
+												<a href="javascript:;" style="font-size: 22px;">{{item.pname}}</a>
+											</h5>
+											<p>实习薪水:{{item.cpsalary}}</p>
+											<p>已选:{{item.nums}}人 &nbsp;&nbsp;&nbsp;{{item.pinfo}}</p>
+											<input type="hidden" id="pidd" :value="item.pid" />
+										</div>
+										<div align="right">
+											<a href="#"  @click="ChoosePos(item.pid,item.pname,item.pimg)"
+											 class="btn btn-danger  btn-sm" id="remove-all">Choose</a>
+
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+
+					<div class="col-md-8">
+						<div class="blog">
+							<div class="single-blog">
+								<div class="panel">
+									<div class="panel-body">
+										<h1 class="text-center mtop35">
+											<img id="imgCom" width='55' height='45'
+												:src="'images/comps/'+cimg" /> 
+											<a href="#">
+											<span id="comName">{{cname}}</span></a>
+										</h1>
+										<p class="text-center auth-row">
+											ID：<span id="comid">{{cid}}</span> | 27 December 2014 | <a href="#">5
+												Comments</a>
+										</p>
+										<div class="swiper-container" v-show="imgSwiper">
+											<!--   v-for="item in ls2" v-if="sw_flag&&!!banners.length"-->
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"  v-for="item in imgss">
+													<img width="100%" hight="300px" :src="'images/'+item" />
+												</div>
+											</div>
+											<!-- 如果需要分页器 -->
+											<div class="swiper-pagination"></div>
+
+											<!-- 如果需要导航按钮 
+				   <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div> -->
+
+											<!-- 如果需要滚动条 -->
+											<div class="swiper-scrollbar"></div>
+										</div>
+										<!---->
+										<div v-show="videoDiv">
+											<video :src="videoPath" controls="controls"
+												ishivideo="true" autoplay="true" isrotate="false"
+												autoHide="true"> 您的浏览器不支持视频video播放
+											</video>
+										</div>
+										<div style="margin-top: 20px;" id="comTxt1"></div>
+
+										<div class="blog-tags">
+											TAGS <a href="#">photoshop</a> <a href="#">illustrator</a> <a
+												href="#">adobe</a> <a href="#">theme</a>
+											<div class="pull-right tag-social">
+												<a href="#" class="btn btn-share pull-right">Share</a>
+
+												<ul class="pull-right">
+													<li><a href="#"> <i class="fa fa-facebook"></i>
+													</a></li>
+													<li><a href="#"> <i class="fa fa-twitter"></i>
+													</a></li>
+													<li><a href="#"> <i class="fa fa-google-plus"></i>
+													</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-body ">
+										<div class="media blog-cmnt">
+											<a href="javascript:;" class="pull-left"> <img alt=""
+												src="images/blog/blog-avatar.jpg" class="media-object">
+											</a>
+											<div class="media-body">
+												<h4 class="media-heading">
+													<a href="#">jones</a>
+												</h4>
+												<p class="mp-less">Ut enim ad minima veniam, quis
+													nostrum exercitationem ullam corporis suscipit laboriosam,
+													nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+													eum iure reprehenderit qui in ea voluptate velit esse quam
+													nihil molestiae.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-body">
+										<h1 class="text-center cmnt-head">Comments</h1>
+
+										<div class="media blog-cmnt">
+											<a href="javascript:;" class="pull-left"> </a>
+											<div class="media-body">
+												<h4 class="media-heading">
+													<a href="#"></a>
+												</h4>
+												<div class="bl-status">
+													<span class="pull-left">回复count:</span> <a
+														href="javascript:;" class="pull-right reply">Reply</a>
+												</div>
+												<p class="mp-less"></p>
+												<!-- 附加图片的，子循环，<img v-for="img in word.imgs"> -->
+												<div class="media blog-cmnt">
+
+													<img alt="" src="images/gallery/"
+														class="media-object-child pull-left">
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-body">
+										<h1 class="text-center cmnt-head ">Leave a Comments</h1>
+										<p class="text-center fade-txt">
+											If you want you can <a href="#">Cancel Reply</a>
+										</p>
+
+										<form role="form" id="stuForms" action="#"
+											class="form-horizontal leave-cmnt"
+											enctype="multipart/form-data">
+											<div class="form-group">
+												<div class="col-lg-12">
+													<input type="hidden" id="widd" name="widd" /> <input
+														type="hidden" id="cidd" name="cidd" /> <input
+														type="hidden" id="sidd" name="sidd" /> <input type="text"
+														id="wtit" name="wtit" class="col-lg-12 form-control"
+														placeholder="Title">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="controls col-md-9">
+													<div class="fileupload fileupload-new"
+														data-provides="fileupload">
+														<span class="btn btn-default btn-file"> <span
+															class="fileupload-new"><i class="fa fa-paper-clip"></i>
+																Select file</span> <span class="fileupload-exists"><i
+																class="fa fa-undo"></i> Change</span> <input type="file"
+															name="filetit" class="default" />
+														</span> <span class="fileupload-preview"
+															style="margin-left: 5px;"></span> <a href="#"
+															class="close fileupload-exists" data-dismiss="fileupload"
+															style="float: none; margin-left: 5px;"></a>
+													</div>
+												</div>
+
+											</div>
+											<div class="form-group">
+												<div class="col-lg-12">
+													<textarea id="wordarea" name="wordarea"
+														class=" form-control" rows="8" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<p>
+												<button class="btn btn-post-cmnt pull-right" type="button">Send
+													words</button>
+											</p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--body wrapper end-->
+
+			<!--footer section start-->
+			<footer class=""> 2014 &copy; AdminEx by ThemeBucket </footer>
+			<!--footer section end-->
+
+
+		</div>
+		<!-- main content end-->
+	</section>
+
+	<!-- Placed js at the end of the document so the pages load faster -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/modernizr.min.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+	<!--common scripts for all pages	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>-->
+	<script src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/camroll_slider.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/vue-resource.min.js"></script>
+	<script type="text/javascript" src="js/paragram.js"></script>
+
+	<script type="text/javascript" src="js/swiper-3.4.1.jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-confirm.1.js"></script>
+
+	<!--file upload-->
+	<script type="text/javascript" src="js/bootstrap-fileupload.min.js"></script>
+	<script src="js/jquery.form.js" type="text/javascript"></script>
+
+	<script>
+	var app=new Vue({
+		el:"#app1",
+		data:{
+			imgSwiper:true,
+			videoDiv:false,
+			//cid:null,
+			lists:[],
+			cimg:'',
+			cname:'',
+			cid:0,
+			videoPath:'',
+			imgss:[],
+			logsname:'',
+			logmname:'',
+			logsid:0,
+			logsimg:'',
+			logscid:0,
+			choosepid:0
+		},
+		mounted() {
+			this.FirstFun()
+		},
+		methods:{
+			FirstFun:function(){
+				//首先获取url参数  cid
+				var req=new Object();
+				//获取当前提交页面的Request对象
+				req=GetRequest();
+				this.cid=req['cid'];
+				alert("detail cid"+this.cid);
+				
+				//缓存 read login info
+				var prolist={};//一串学生登录的信息
+				if(window.localStorage){
+						//读取HTML5中的缓存，key是deptlist，而且读取出来text格式，还需要JSON.p.. text转换为json格式
+						prolist=localStorage.getItem("stuDetail");//JSON.parse(   .parseJSON()
+				}else{
+						prolist=Cookie.read("stuDetail");
+				}
+				if(prolist!=null && prolist!=""){
+					prolist=JSON.parse(prolist);			
+					this.logsname=prolist.sname;
+					this.logmname=prolist.mname;
+					this.logsid=prolist.sid;
+					this.logsimg=prolist.simg;
+					this.logscid=prolist.scid;
+					//alert(this.logsid+" + "+prolist.sname+" + "+this.logsimg);
+				}else{
+					alert("请先登录，然后查看企业详情");
+					location.href="login.html";
+				}
+				
+				this.$http.post('stu/posDetail.action',
+				     {'cid':this.cid},{emulateJSON:true})
+				.then(function(data){
+					this.lists=data.body.clist;
+					this.cimg=data.body.companydetail.cimg;
+					this.cname=data.body.companydetail.cname;
+					this.cid=data.body.companydetail.cid;
+					$.get("images/comps/"+data.body.companydetail.cztxt,null,function(data){
+						$("#comTxt1").html("&nbsp;&nbsp;&nbsp;&nbsp;"+data);
+					});
+					//判断录播，视频 二选一
+					if(data.body.companydetail.czchose==0){
+					    this.imgSwiper=true;
+					    this.videoDiv=false;
+						this.imgss=data.body.companydetail.czimgs;
+					    //swiper jQuery图片轮播的插件，有其自身的开发特点，也就是现在vuejs又套用了jQuery的语法了
+					    //当前轮播显示的是时候，执行轮播的函数效果，
+					    this.$nextTick(function(){
+					    	this.swperInit();
+					    })	
+					}else{
+						this.imgSwiper=false;
+						this.videoDiv=true;
+						this.videoPath="images/comps/"+data.body.companydetail.czvideo;
+					}
+				   console.log(this.lists);	
+				},function(res){
+					alert("error");
+				})
+			},
+			swperInit(){
+				//alert(234);
+				var myswiper=new Swiper('.swiper-container',{
+					//设置滚动的方向 横向
+					direction:'horizontal',
+					//设置自定滚动的时间间隔
+					autoplay:2000,
+					//是否循环轮播
+					loop:true,
+					//分页器 设置圆点
+					pagination:'.swiper-pagination',
+					//点击分页器设置是否切换图片
+					paginationClickable:true,
+					//如果需要设置前进后退的按钮
+					nextButton:'.swiper-button-next',
+					prevButton:'.swiper-button-prev',
+					//用户触碰后停止轮播
+					autoplayDisableOnInteraction:false
+				})
+			},
+			
+			SendPos(){
+				this.$http.post('stu/ChoosePos.action',
+				     {'company.cid':this.cid,
+					  'position.pid':this.choosepid,
+					  'sid':this.logsid,
+					  'scid':this.logscid},
+					 {emulateJSON:true})
+				.then(function(data){	
+					$("#exampleModal").modal("hide"); 	
+					//alert(data);
+					if(data.body=="ok"){
+						$.confirm({
+						    icon: 'fa fa-smile-o',
+						    theme: 'modern',
+						    closeIcon: true,
+						    animation: 'scale',
+						    type: 'blue',
+						});
+					}else{
+						alert("提交实习岗位error");
+					}
+					console.log(data);
+				},function(res){
+					alert("error");
+				})
+			},
+			ChoosePos(pid,pname,pimg){
+				//alert("gid:"+gid+"-"+this.logsid+"-"+this.cid);
+				this.choosepid=pid;
+				var test=null;
+				if(this.logscid==0){
+					$('.modal-title').text("确认选择该企业专业?");
+				}else{
+					$('.modal-title').text("确认修改当前该企业专业?");
+				}				
+				$("#recipient-name").html("<img width='75' height='70' src='images/comps/"
+				+this.cimg+"'> "+this.cname) ; 
+				$("#message-text").html(pname) ; 	
+				$("#message-pid").val(pid) ; 
+				$("#message-img").attr("src",'images/projects/'+pimg) 
+				//show模态框
+				$("#exampleModal").modal("show");  
+				//if(confirm(this.logsname+" "+test+" "+gname+" 实习岗位?")==true){
+					//"gangs.gid":2   "companys.cid"
+					// 
+					
+				//}
+			}
+		}
+	})
+</script>
+</body>
+</html>

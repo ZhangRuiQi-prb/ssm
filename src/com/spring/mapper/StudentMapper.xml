@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 5.针对所有实体类对象的映射配置文件 映射
+ namespace呼应的是mapper接口的路径
+-->
+<mapper namespace="com.spring.mapper.IStudentMapper">
+    <!--namespace="com.java.entity":针对该包下的所以实体类对象映射配置文件   -->
+    <resultMap id="StudentResult" type="com.spring.entity.Student">
+    	<id column="sid" property="sid" jdbcType="INTEGER" javaType="Integer" />
+     	<result column="sname" property="sname" jdbcType="VARCHAR" javaType="string"/>  
+     	<result column="scid" property="scid" jdbcType="INTEGER" javaType="Integer"/>
+     	<result column="spwd" property="spwd" jdbcType="INTEGER" javaType="Integer"/>
+     	<result column="sage" property="sage" jdbcType="INTEGER" javaType="Integer" />  
+     	<result column="sdate" property="sdate" jdbcType="VARCHAR" javaType="string"/>
+     	<result column="simg" property="simg" jdbcType="VARCHAR" javaType="string"/>
+     	<result column="ssex" property="ssex" jdbcType="VARCHAR" javaType="string"/>
+     	<result column="s_mid" property="s_mid" jdbcType="INTEGER" javaType="Integer" />  
+     	<association property="major" javaType="com.spring.entity.Major"
+      		resultMap="MajorResult">
+     	</association>
+     	<association property="company" javaType="com.spring.entity.Company"
+      		resultMap="CompanyResult">
+     	</association>
+     	<association property="position" javaType="com.spring.entity.Position"
+      		resultMap="PositionResult">
+     	</association>
+    </resultMap>
+    
+    <resultMap type="com.spring.entity.Major" id="MajorResult">
+    	<id column="mid" property="mid" jdbcType="INTEGER" javaType="Integer" />
+    	<result column="mname" property="mname" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="mtime" property="mtime" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="mtest" property="mtest" jdbcType="VARCHAR" javaType="string"/>
+    </resultMap>
+    
+    <resultMap type="com.spring.entity.Company" id="CompanyResult">
+    	<id column="cid" property="cid" jdbcType="INTEGER" javaType="Integer" />
+    	<result column="num" property="num" jdbcType="INTEGER" javaType="Integer" />
+    	<result column="allnums" property="allnums" jdbcType="INTEGER" javaType="Integer" />
+    	<result column="cname" property="cname" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="ctime" property="ctime" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="cimg" property="cimg" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="c_postion" property="c_postion" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="ctest" property="ctest" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="cdetail" property="cdetail" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="cmoney" property="cmoney" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="czhuc" property="czhuc" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="pos" property="pos" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="czimgs" property="czimgs" jdbcType="VARCHAR" javaType="string"/>  
+      	<result column="czvideo" property="czvideo" jdbcType="VARCHAR" javaType="string"/>  
+      	<result column="cztxt" property="cztxt" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="czchose" property="czchose" jdbcType="VARCHAR" javaType="string"/>
+    </resultMap>
+    
+    <resultMap type="com.spring.entity.Position" id="PositionResult">
+    	<id column="pid" property="pid" jdbcType="INTEGER" javaType="Integer" />
+    	<result column="nums" property="nums" jdbcType="INTEGER" javaType="Integer"/>
+    	<result column="pname" property="pname" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="ptime" property="ptime" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="pimg" property="pimg" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="ptest" property="ptest" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="pmname" property="pmname" jdbcType="VARCHAR" javaType="string"/>
+    	<result column="pinfo" property="pinfo" jdbcType="VARCHAR" javaType="string"/>
+    </resultMap>
+    
+   	<resultMap id="ComposdetailResult" type="com.spring.entity.Composdetail">
+    	<id column="cpid" property="cpid" jdbcType="INTEGER" javaType="Integer" />
+     	<result column="cp_cid" property="cp_cid" jdbcType="INTEGER" javaType="Integer" />
+     	<result column="cp_pid" property="cp_pid" jdbcType="INTEGER" javaType="Integer" />
+     	<result column="cpnums" property="cpnums" jdbcType="INTEGER" javaType="Integer" />
+     	<result column="cprequire" property="cprequire" jdbcType="VARCHAR" javaType="string"/> 
+     	<result column="cpsalary" property="cpsalary" jdbcType="VARCHAR" javaType="string"/>
+     	<result column="nums" property="nums" jdbcType="INTEGER" javaType="Integer" />
+     	<association property="company" javaType="com.spring.entity.Company"
+      		resultMap="CompanyResult">
+     	</association>
+     	<association property="position" javaType="com.spring.entity.Position"
+      		resultMap="PositionResult">
+     	</association>
+    </resultMap>
+   	
+    <select id="selectAllStudent" resultMap="StudentResult">
+    	select s.*,m.mname,p.pid, IFNULL(p.pname,'空') as pname,c.cid,IFNULL(c.cname,'空') as cname
+		from student s LEFT JOIN major m ON s.s_mid=m.mid
+		LEFT JOIN scores sc ON s.sid=sc.sc_sid
+		LEFT JOIN company c ON sc.sc_cid=c.cid
+		LEFT JOIN position p ON sc.sc_pid=p.pid
+    </select>
+    
+    <select id="selectAllStudentBySearch" resultMap="StudentResult" parameterType="com.spring.entity.Student">
+    	select s.*,m.mname,p.pid, IFNULL(p.pname,'空') as pname,c.cid,IFNULL(c.cname,'空') as cname
+		from student s LEFT JOIN major m ON s.s_mid=m.mid
+		LEFT JOIN scores sc ON s.sid=sc.sc_sid
+		LEFT JOIN company c ON sc.sc_cid=c.cid
+		LEFT JOIN position p ON sc.sc_pid=p.pid
+		where s.sname like #{sname}
+		<if test="sid neq -1 and sid neq 0">and s.sid=#{sid}</if>
+		<if test="s_mid neq -1 and s_mid neq 0">and s.s_mid=#{s_mid}</if>
+		<if test="s_pid neq -1 and s_pid neq 0">and p.pid=#{s_pid}</if>
+		<if test="s_cid neq -1 and s_cid neq 0">and c.cid=#{s_cid}</if>
+    </select>
+    
+    <select id="selectAllMajor" resultMap="MajorResult">
+   		SELECT * FROM major
+   	</select>
+   	
+   	<select id="selectAllCompany" resultMap="CompanyResult">
+   		SELECT * FROM company
+   	</select>
+   	
+   	<select id="selectAllPosition" resultMap="PositionResult">
+   		SELECT * FROM position
+   	</select>
+   	
+   	
+   	<insert id="insertStudent" parameterType="com.spring.entity.Student">
+   		insert into student values(null,#{sname},#{sage},NOW(),#{simg},#{ssex},#{s_mid})
+   	</insert>
+   	
+   	<delete id="deleteStudent" parameterType="java.lang.Integer">
+   		delete from student where sid=#{sid}
+   	</delete>
+   	
+   	<update id="updateStudent" parameterType="com.spring.entity.Student">
+   		update student s
+		LEFT JOIN major m ON s.s_mid=m.mid
+		LEFT JOIN scores sc ON s.sid=sc.sc_sid
+		LEFT JOIN company c ON sc.sc_cid=c.cid
+		LEFT JOIN position p ON sc.sc_pid=p.pid
+		set 
+		s.sname=#{sname},
+		s.sage=#{sage},
+		s.simg=#{simg},
+		s.s_mid=#{s_mid},
+		sc.sc_cid=#{s_cid},
+		sc.sc_pid=#{s_pid} where s.sid=#{sid}
+   	</update>
+   	
+   	
+   	<select id="selectAllNum" resultMap="CompanyResult">
+   		SELECT s.sc_cid as cid,
+		(SELECT cname from company WHERE cid=s.sc_cid) 
+		as cname ,COUNT(s.sc_sid) as num from scores s GROUP BY s.sc_cid
+   	</select>
+   	
+   	<select id="selectCompanyDetail" resultMap="CompanyResult">
+   		select c.*,
+		(select count(*) from scores sc where sc.sc_cid=c.cid) as num,
+		(select group_concat(pname separator ',') as name1 from position 
+		where find_in_set(pid,c.c_position)) 
+		as pos, (select sum(cpnums) from composdetail where cp_cid=c.cid) as allnums
+		from company c
+   	</select>
+   	
+   	<select id="selectComposdetailBycid" resultMap="ComposdetailResult" parameterType="java.lang.Integer">
+   		SELECT cpd.cpid,cpd.cprequire,cpd.cpnums,cpd.cpsalary,p.pid,p.pname,p.pimg,
+		(SELECT COUNT(*) from scores where sc_cid=c.cid and sc_pid=p.pid) as nums
+		FROM composdetail cpd,company c,position p 
+		where c.cid=cpd.cp_cid and p.pid=cpd.cp_pid and c.cid=#{1}
+   	</select>
+   	
+   	<select id="SelectPosMajorByChart" resultMap="PositionResult" parameterType="com.spring.entity.Position">
+   		SELECT count(s.sname) as nums,m.mname as pmname ,p.pname
+		from scores sc,student s,major m,position p
+		WHERE sc_sid=s.sid and s.s_mid=m.mid and p.pid=sc_pid and sc_cid=#{company.cid}
+ 		and p.pid=#{pid}  GROUP BY mname
+   	</select>
+   	
+   	<select id="SelectStuLogin" resultMap="StudentResult" parameterType="com.spring.entity.Student">
+   		select s.*, m.mname,(select sc.scid from scores sc where sc_sid=s.sid)
+		as scid from student s, major m
+		where s.s_mid=m.mid and s.sname=#{sname} and s.spwd=#{spwd}
+   	</select>
+   	
+   	<select id="selectPosDetailByCid" resultMap="ComposdetailResult" parameterType="java.lang.Integer">
+   		select cpd.cpid,cpd.cpnums,cpd.cpsalary,p.pid,p.pname,p.pimg,p.pinfo,
+   		(select count(*) from scores where sc_cid=cpd.cp_cid and sc_pid=p.pid) as nums
+		from composdetail cpd,position p
+		where cpd.cp_cid=#{1} and cpd.cp_pid=p.pid
+   	</select>
+   	
+   	<select id="selectComDetailByCid" resultMap="CompanyResult" parameterType="java.lang.Integer">
+   		select * from company where cid=#{cid}
+   	</select>
+   
+   	<insert id="insertChoosePos" parameterType="com.spring.entity.Student">
+   		insert into scores values(null,#{sid},#{company.cid},#{position.pid})
+   	</insert>
+   	<update id="updateChoosePos" parameterType="com.spring.entity.Student">
+   		update scores set sc_cid=#{company.cid},sc_pid=#{position.pid}
+   		where sc_sid=#{sid}
+  	</update>
+</mapper>
